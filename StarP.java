@@ -161,17 +161,17 @@ class StarP{
 //      *
 
 
-for(int i=1;i<=n;i++){
-    for(int j=1;j<=n;j++){
-        if(i>=2 && j>=2 && j<=n-1 && i<=n-1){
-            System.out.print(" ");
-        }
-        else{
-            System.out.printf("*");
-        }
-    }
-    System.out.println();
-}
+// for(int i=1;i<=n;i++){
+//     for(int j=1;j<=n;j++){
+//         if(i>=2 && j>=2 && j<=n-1 && i<=n-1){
+//             System.out.print(" ");
+//         }
+//         else{
+//             System.out.printf("*");
+//         }
+//     }
+//     System.out.println();
+// }
 
 
 // output:-
@@ -185,6 +185,33 @@ for(int i=1;i<=n;i++){
 // *      *
 // *      *
 // ********
+
+int temp=0;
+for(int i=1;i<=n;i++){
+    if(i%2!=0){
+        for(int j=1;j<=3;j++){
+            temp +=1;
+            System.out.print(temp+" ");
+        }
+    }
+    else{
+        int count=temp+1;
+        for(int j=temp+3;j>=count;j--){
+            temp +=1;
+            System.out.print(j+" ");
+        }
+    }
+    System.out.println();
+
+}
+
+// output :-
+// enter the value of n :
+// 4
+// 1 2 3 
+// 6 5 4
+// 7 8 9
+// 12 11 10
 
     }
 }
