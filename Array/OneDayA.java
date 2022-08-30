@@ -40,7 +40,10 @@ class OneDayA{
             arr[i]=sc.nextInt(); // here array are intialization...
         }
 
-        System.out.println("your present arrays :-");
+        //first method to print array
+        System.out.println("your present arrays :- \n"+ Arrays.toString(arr));
+        
+        //second method method to print array
         for(int j :arr){ //foreach loop;
             System.out.format("%d ",j);   // here array are printed;
         }
