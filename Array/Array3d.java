@@ -21,8 +21,8 @@ class Array3d{
         
 
         for(int i=0;i<r;i++){
-            for(int j=0;j<c;j++){
-                for(int k=0;k<z;k++){
+            for(int j=0;j<arr[i].length;j++){
+                for(int k=0;k<arr[i][j].length;k++){
                     System.out.print(arr[i][j][k]+" ");
                 }
             }
