@@ -6,7 +6,8 @@ class Kthlargest{
         System.out.println("enter the size of array : ");
         int n=sc.nextInt();
         int arr[] = new int[n];
-        int k=3;
+        System.out.println("enter the position to find element : ");
+        int k=sc.nextInt();
         System.out.println("Enter the element : ");
         for(int i=0;i<arr.length;i++){
             arr[i]=sc.nextInt();
