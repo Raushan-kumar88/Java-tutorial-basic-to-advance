@@ -22,12 +22,15 @@ class findEvenOdd{
             System.out.print(i+" ");
             sum=sum+i;
         }
-        System.out.println("\nthe sum of even no: "+sum);
-        System.out.print("\nodd element :- ");
+        System.out.println("\nthe total even no : "+d1.size());
+        System.out.println("the sum of even no: "+sum);
+        System.out.println("---------------------------------------");
+        System.out.print("odd element :- ");
         for(int j : d2){
             System.out.print(j+" ");
             sum1+=j;
         }
-        System.out.println("\nthe sum of odd no: "+sum1);
+        System.out.println("\nthe total even no : "+d2.size());
+        System.out.println("the sum of odd no: "+sum1);
     }
 }
