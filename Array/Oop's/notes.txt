@@ -1,0 +1,31 @@
+Oop's (Object Oriented Programming Structure);
+There are six types of oops
+1.class
+2.Object/method
+3.Inheritence
+4.Polymorphism
+5.Abstraction
+6.Capsulation
+now we explain one by one....
+class :- class is a collection of object and method.. or class is a template or blueprint or prototype.
+class is not real world entity..
+class is not occupy memory
+ex :- Animals,Birds,Fruits etc
+Animals(class) ---->dog,cow,cat etc...(object).
+Syntax :-
+access modifier class ClassName{
+   -> method
+   -> constructors
+   -> fields
+   -> blocks
+   -> nested class
+}
+
+Method :- Method is a set of code which is perform a particular task...
+Advantage:-
+code reusability
+code optimization
+
+Object :- Object is a instance of class
+object is a real world entity
+object is occupy of memory;
