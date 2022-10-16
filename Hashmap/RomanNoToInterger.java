@@ -1,7 +1,7 @@
 import java.util.*;
 class RomanNoToInterger{
 static int RomanToInteger(String roman){
-    Map<Character,Integer> hs = new HashMap<>();
+    HashMap<Character,Integer> hs = new HashMap<>();
     hs.put('I',1);
     hs.put('V',5);
     hs.put('X',10);
