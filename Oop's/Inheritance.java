@@ -43,3 +43,25 @@ class Inheritance extends A{
 // But in java only three Inheritance are used 
 // single Inheritance,Multilevel,
 // Heirachical Inheritance
+
+
+// note:-
+// There are two types of relation in Inheritance 
+// IS-A relation and HAS-A relation
+// Example of IS-A relation 
+// class A{
+//     //code
+// }
+// class B extends A{
+//     //code
+// }
+// IS-A relationship is achieved by extends keyword;
+// Example of HAS-A relation 
+// class A{
+//     // code
+// } 
+// class B{
+//     //code
+//     A obj=new A();
+// }
+// HAS-A relation is achieved by new keyword;
