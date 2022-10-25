@@ -1,16 +1,37 @@
 // note:-Inheriting the properties of parent class into child class.
 // using extends keyword
-class ParentInheritance{
-    void display(){
-        System.out.println("I am parents class ..........");
+// class ParentInheritance{
+//     void display(){
+//         System.out.println("I am parents class ..........");
+//     }
+// }
+// class Inheritance extends ParentInheritance{
+//     public static void main(String[] args) {
+//         Inheritance obj=new Inheritance();
+//         obj.display();
+//     }
+// }
+
+class A{
+    void A(){
+        System.out.println("class A");
     }
 }
-class Inheritance extends ParentInheritance{
+class B{
+    void A(){
+        System.out.println("class B");
+    }
+}
+
+class Inheritance extends A{
     public static void main(String[] args) {
+        System.out.println("I am Main class");
         Inheritance obj=new Inheritance();
-        obj.display();
+        obj.A();
+        // obj.main();
     }
 }
+
 
 // note:-
 // There are 5 Inheritance 
