@@ -1,5 +1,7 @@
-class BitwiseOperator{
+import java.util.*;
+class BitwiseOperator{    
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         int a=9;
         int b=10;
         System.out.println(a|b); //bitwise operator OR
@@ -13,5 +15,11 @@ class BitwiseOperator{
 
         // System.out.println(a~b);
 
+        System.out.println("enter any number : ");
+        int n=sc.nextInt();
+        if(n%2==0 && n%3==0){
+            System.out.println(n);
+        }
     }
 }
+
