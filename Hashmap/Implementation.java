@@ -5,7 +5,7 @@ class Implementation{
         // System.out.println(Arrays.toString(arr));
         HashMap<Integer,Integer> hm = new HashMap<>();
         for(int i=0;i<arr.length;i++){
-            
+
             // first method
             // if(hm.containsKey(arr[i])){
             //     hm.put(arr[i],hm.get(arr[i])+1);
@@ -17,8 +17,18 @@ class Implementation{
             // second method
             hm.put(arr[i],hm.getOrDefault(arr[i],0)+1);
         }
-        Set<Integer> keySet=hm.keySet();
-        for(Integer key : keySet){
+
+
+        //first method to access element to hashmap
+        // Set<Integer> keySet=hm.keySet();  
+        // for(Integer key : keySet){
+        //     if(hm.get(key)>arr.length/3){
+        //         System.out.println(key);
+        //     }
+        // }
+
+        // second method to print element from hashmap
+        for(Integer key : hm.keySet()){
             if(hm.get(key)>arr.length/3){
                 System.out.println(key);
             }
