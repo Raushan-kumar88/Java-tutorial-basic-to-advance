@@ -38,6 +38,5 @@ public class twoArrayProblem
 		calUnion(arr,arr2);
         // this funciton is calculate Intersection 
 		calIntersection(arr,arr2);
-		
 	}
 }
