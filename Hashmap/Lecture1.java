@@ -35,6 +35,46 @@ class Lecture1{
             System.out.println("key : "+k+" --- value : "+hm.get(k));
         }
 
+        System.out.println("-------------largest subarrays :------------------ ");
+
+        // find largest subArrays:-
+
+        int arr[] = {15,2,-2,-8,1,7,10,23};
+        HashMap<Integer,Integer> hs = new HashMap<>();
+        int sum=0;
+        int len=0;
+        for(int i=0;i<arr.length;i++){
+            sum+=arr[i];
+            if(hs.containsKey(sum)){
+                len=Math.max(len,i-hs.get(sum));
+            }
+            else{
+                hs.put(sum,i);
+            }
+        }
+        System.out.println("largest subarrays : "+len);
+
+
+
+
+        System.out.println("-------------count sub subarrays equal to k :------------------ ");
+
+        // find sumArrays to equal to k 
+        int arr1[]={10,2,-2,-20,10};
+        HashMap<Integer,Integer> hs1= new HashMap<>();
+        int k=-10;
+        hs1.put(0,1);
+        int ans=0;
+        int sum1=0;
+        for(int i=0;i<arr1.length;i++){
+            sum1+=arr1[i];
+            if(hs1.containsKey(sum1-k)){
+                ans+=hs1.get(sum1-k);
+
+            }
+            hs1.put(sum1,hs1.getOrDefault(sum1,0)+1);
+        }
+        System.out.println(ans);
 
 
 
