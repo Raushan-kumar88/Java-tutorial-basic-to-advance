@@ -70,7 +70,7 @@ class Lecture1{
             sum1+=arr1[i];
             if(hs1.containsKey(sum1-k)){
                 ans+=hs1.get(sum1-k);
-
+                System.out.println(hs1.get(sum1-k)+" :-"+ans);
             }
             hs1.put(sum1,hs1.getOrDefault(sum1,0)+1);
         }
