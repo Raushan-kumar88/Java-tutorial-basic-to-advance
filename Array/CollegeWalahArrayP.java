@@ -49,6 +49,59 @@ class CollegeWalahArrayP{
         }
         return rotate;
     }
+
+    // create funcion to sort array in lowest form;
+    static int[] SwapArraylowest(int arr[]){
+        int le=arr.length;
+        int l=0;
+        int r=le-1;
+        while(l<r){
+            if(arr[l]==1 && arr[r]==0){
+                int temp=arr[r];
+                arr[r]=arr[l];
+                arr[l]=temp;
+                l++;
+                r--;
+            }
+            if(arr[l]==0){
+                l++;
+            }
+            if(arr[r]==1){
+                r--;
+            }
+        }
+        return arr;
+    }
+
+// swapping in odd and even
+// while(left<right){
+//     if(arr[left]%2==1 && arr[right]%2==0){
+//         int temp=arr[right];
+//         arr[right]=arr[left];
+//         arr[left]=temp;
+//         right--;
+//         left++;
+//     }
+//     if(arr[left]%2==0){
+//         left++;
+//     }
+//     if(arr[right]%2==1){
+//         right--;
+//     }
+// }
+
+static int[] Prefixsum(int arr[]){
+   
+		int n=arr.length;
+		int temp[] = new int[n];
+		temp[0]=arr[0];
+		for (int i=1;i<n ;i++ ){
+		    temp[i]=temp[i-1]+arr[i];
+		} 
+    return temp;
+}
+
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int arr[] = {0,0,-2,-3,0,-4};
@@ -97,7 +150,26 @@ class CollegeWalahArrayP{
 
 // 		System.out.println("The reverse Arrays : "+Arrays.toString(arr));
 
+// Q to swap array without using any extra array;
+            // create array
+    int arr4[]={1,0,0,1,0,1,1,0,0};
+    // int result2=SwapArraylowest(arr4);
+    System.out.println("after swapping arrays : "+Arrays.toString(arr4));
+    int result2[]=SwapArraylowest(arr4);
+    System.out.println("after swapping arrays : "+Arrays.toString(arr4));
 
 
+
+
+    // find prefix sum array
+    // q.
+    // create array;;;
+    int ar[]={2,1,4,3,7,5,6};
+    
+    int result3[]=Prefixsum(ar);
+    
+    System.out.println("prefix sum : "+Arrays.toString(result3));
+
+    
     }
 }

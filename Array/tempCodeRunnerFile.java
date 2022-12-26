@@ -1,2 +1,4 @@
-int ans[]={i,j};
-                    System.out.println("sum of target : "+Arrays.toString(ans));
+for(int i=1;i<ne;i++){
+    //     pre[i]=pre[i-1]+arr[i];
+        
+    // }
