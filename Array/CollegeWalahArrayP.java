@@ -102,6 +102,20 @@ static int[] Prefixsum(int arr[]){
 }
 
 
+
+// here create prefix function sum of the array 
+    static int[] CalPrefixsum(int arr[]){
+        for(int i=1;i<arr.length;i++){
+            arr[i]=arr[i]+arr[i-1];
+        }
+
+        return arr;
+    }
+
+
+
+
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int arr[] = {0,0,-2,-3,0,-4};
@@ -170,6 +184,27 @@ static int[] Prefixsum(int arr[]){
     
     System.out.println("prefix sum : "+Arrays.toString(result3));
 
+
+
+// Q. calculate Prefixsum of the arrays:
+    System.out.println("----------------------------");
+    int A[]={1,2,4,3,6,5,9,8};
+    System.out.println("The sum of prefix Arrays : "+Arrays.toString(A));
+
+    int ansA[]= CalPrefixsum(A);
+    System.out.println("The sum of prefix Arrays : "+Arrays.toString(ansA));
     
+    // here ask query from the user
+    System.out.println("enter the query of : ");
+    int que=sc.nextInt();
+    while(que>0){
+        System.out.println("enter the first : ");
+        int l1=sc.nextInt();
+        System.out.println("enter the Last : ");
+        int r1=sc.nextInt();
+        int sum =ansA[r1]-ansA[l1-1];
+        System.out.println("the sum of "+l1+" and "+r1+ " : "+sum);
+        que--;
+    }
     }
 }
