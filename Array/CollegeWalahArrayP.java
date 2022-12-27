@@ -114,6 +114,42 @@ static int[] Prefixsum(int arr[]){
 
 
 
+    // here to create find the sum of the Arrays 
+    static int findSum(int arr[]){
+        int result=0;
+        for(int i=0;i<arr.length;i++){
+            result+=arr[i];
+        }
+        return result;
+    }
+
+
+
+// calculate sub array or divide equal part of the array
+// make function to find the arrays
+    static Boolean CalSubArray(int arr[]){
+        int result=findSum(arr);
+        int Prefixsum=0;
+        for(int i=0;i<arr.length;i++){
+             Prefixsum+=arr[i];
+            int sufixSum=result-Prefixsum;
+            if(Prefixsum==sufixSum){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+// here find findSuffixsum sum Arrays : 
+    static int[] findSuffixsum(int arr[]){
+        for(int i=arr.length-2;i>=0;i--){
+            arr[i]+=arr[i+1];
+        }
+        return arr;
+    }
+
+
 
 
     public static void main(String[] args) {
@@ -192,7 +228,7 @@ static int[] Prefixsum(int arr[]){
     System.out.println("The sum of prefix Arrays : "+Arrays.toString(A));
 
     int ansA[]= CalPrefixsum(A);
-    System.out.println("The sum of prefix Arrays : "+Arrays.toString(ansA));
+    System.out.println("The  prefix sum of the Arrays : "+Arrays.toString(ansA));
     
     // here ask query from the user
     System.out.println("enter the query of : ");
@@ -206,5 +242,17 @@ static int[] Prefixsum(int arr[]){
         System.out.println("the sum of "+l1+" and "+r1+ " : "+sum);
         que--;
     }
+
+    System.out.println("----------------------------");
+
+    // next question divide array in equal part
+    int A1[]={1,0,3,5,6,4,1};
+    System.out.println("The current Arrays : "+Arrays.toString(A1));
+
+    int Ans3[]=findSuffixsum(A1);
+    System.out.println("The suffix sum of the Arrays : "+Arrays.toString(Ans3));
+
+    // Boolean ans1=CalSubArray(A1);
+    System.out.println("the result : "+CalSubArray(A1));
     }
 }
