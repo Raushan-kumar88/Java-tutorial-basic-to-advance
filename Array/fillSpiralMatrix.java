@@ -13,32 +13,70 @@ class fillSpiralMatrix{
         int count=1;
         while(count<=n*n){
             // fill toprow
+        //     for(int i=leftcol;i<=rightcol && count<=n*n;i++){
+        //         mat[toprow][i]=count;
+              
+        //         count++;
+        //     }
+
+        //     toprow++;
+        //     // fill leftcolumn;
+        //     for(int i=toprow;i<=botrow && count<=n*n;i++){
+        //         mat[i][rightcol]=count++;
+        //     }
+        //     rightcol--;
+
+        //     // fill bottomrow
+        //     for(int i=rightcol;i>=leftcol && count<=n*n;i--){
+        //         mat[botrow][i]=count++;
+        //     }
+        //     botrow--;
+        //     // fill leftcol
+        //     for(int i=botrow;i>=toprow && count<=n*n;i--){
+        //         mat[i][leftcol]=count++;
+
+        //     }
+        //     leftcol++;
+        // }
+        // this code is output
+            // 1   2   3   4
+            // 12  13  14   5
+            // 11  16  15   6
+            // 10   9   8   7
+
+
+            // fill leftcol
+            for(int i=toprow;i<=botrow && count<=n*n;i++){
+                mat[i][leftcol]=count++;
+                
+            }
+            leftcol++;
+            // // fill bottomrow
             for(int i=leftcol;i<=rightcol && count<=n*n;i++){
+                mat[botrow][i]=count++;
+            }
+            botrow--;
+            
+            // fill rightcolumn;
+            for(int i=botrow;i>=toprow && count<=n*n;i--){
+                mat[i][rightcol]=count++;
+            }
+            rightcol--;
+             // fill toprow
+            for(int i=rightcol;i>=leftcol && count<=n*n;i--){
                 mat[toprow][i]=count;
               
                 count++;
             }
-
             toprow++;
-            // fill leftcolumn;
-            for(int i=toprow;i<=botrow && count<=n*n;i++){
-                mat[i][rightcol]=count++;
-            }
-            rightcol--;
-
-            // fill bottomrow
-            for(int i=rightcol;i>=leftcol && count<=n*n;i--){
-                mat[botrow][i]=count++;
-            }
-            botrow--;
-            // fill leftcol
-            for(int i=botrow;i>=toprow && count<=n*n;i--){
-                mat[i][leftcol]=count++;
-
-            }
-            leftcol++;
-
         }
+
+        // this code is outpu:-
+        // 1  12  11  10
+        // 2  13  16   9
+        // 3  14  15   8
+        // 4   5   6   7
+
         return mat;
     }
     public static void main(String[] args) {
@@ -46,5 +84,5 @@ class fillSpiralMatrix{
         int SpiralMatrix[][]=Fillmatrix(n);
         displayMatrix(SpiralMatrix);
     }
-    
+
 }
