@@ -1,6 +1,6 @@
 // WAP to Set -1 where row or column present in zero;
 
-import java.util.*;
+// import java.util.*;
 class ArraySetValue{
     public static void Operation(int arr[][],int R,int C) {
 
